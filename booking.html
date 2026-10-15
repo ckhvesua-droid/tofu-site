@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Бронирование — Тофу</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header class="header">
+    <div class="container header__inner">
+        <a href="index.html" class="logo">
+            <span class="logo__mark">豆</span>
+            <span class="logo__text">Тофу</span>
+        </a>
+        <nav class="nav">
+            <a href="index.html" class="nav__link">Главная</a>
+            <a href="menu.html" class="nav__link">Меню</a>
+            <a href="about.html" class="nav__link">О кафе</a>
+            <a href="contacts.html" class="nav__link">Контакты</a>
+            <a href="booking.html" class="nav__link nav__link--accent nav__link--active">Бронирование</a>
+        </nav>
+        <button class="burger" aria-label="Меню">
+            <span></span><span></span><span></span>
+        </button>
+    </div>
+</header>
+
+<section class="page-header">
+    <div class="container">
+        <h1 class="page-header__title">Бронирование столика</h1>
+        <p class="page-header__subtitle">Оставьте заявку — мы подтвердим бронь по телефону</p>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container form-wrap">
+
+        <form class="form" id="bookingForm" novalidate>
+
+            <div class="form__row">
+                <label class="form__label" for="name">Ваше имя *</label>
+                <input type="text" id="name" name="name" class="form__input"
+                       placeholder="Например, Анна" required>
+                <span class="form__error" data-error-for="name"></span>
+            </div>
+
+            <div class="form__row">
+                <label class="form__label" for="phone">Телефон *</label>
+                <input type="tel" id="phone" name="phone" class="form__input"
+                       placeholder="+7 (___) ___-__-__" required>
+                <span class="form__error" data-error-for="phone"></span>
+            </div>
+
+            <div class="form__row form__row--two">
+                <div>
+                    <label class="form__label" for="date">Дата *</label>
+                    <input type="date" id="date" name="date" class="form__input" required>
+                    <span class="form__error" data-error-for="date"></span>
+                </div>
+                <div>
+                    <label class="form__label" for="time">Время *</label>
+                    <input type="time" id="time" name="time" class="form__input" required>
+                    <span class="form__error" data-error-for="time"></span>
+                </div>
+            </div>
+
+            <div class="form__row">
+                <label class="form__label" for="guests">Количество гостей *</label>
+                <select id="guests" name="guests" class="form__input" required>
+                    <option value="">Выберите...</option>
+                    <option value="1">1 человек</option>
+                    <option value="2">2 человека</option>
+                    <option value="3">3 человека</option>
+                    <option value="4">4 человека</option>
+                    <option value="5">5 человек</option>
+                    <option value="6+">Больше 5</option>
+                </select>
+                <span class="form__error" data-error-for="guests"></span>
+            </div>
+
+            <div class="form__row">
+                <label class="form__label" for="comment">Комментарий</label>
+                <textarea id="comment" name="comment" class="form__input form__textarea"
+                          placeholder="Пожелания, особые случаи и т.д."></textarea>
+            </div>
+
+            <button type="submit" class="btn btn--primary form__submit">
+                Забронировать
+            </button>
+
+            <p class="form__note">* — обязательные поля</p>
+        </form>
+
+        <!-- Сообщение об успехе -->
+        <div class="form-success" id="formSuccess" hidden>
+            <div class="form-success__icon">✓</div>
+            <h3 class="form-success__title">Заявка отправлена!</h3>
+            <p class="form-success__text">
+                Спасибо, мы свяжемся с вами в ближайшее время для подтверждения брони.
+            </p>
+            <a href="index.html" class="btn btn--outline">На главную</a>
+        </div>
+
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="container footer__inner">
+        <div class="footer__col">
+            <a href="index.html" class="logo">
+                <span class="logo__mark">豆</span>
+                <span class="logo__text">Тофу</span>
+            </a>
+            <p class="footer__text">Вегетарианская кухня в уютной атмосфере</p>
+        </div>
+        <div class="footer__col">
+            <h4>Разделы</h4>
+            <a href="menu.html">Меню</a>
+            <a href="about.html">О кафе</a>
+            <a href="contacts.html">Контакты</a>
+            <a href="booking.html">Бронирование</a>
+        </div>
+        <div class="footer__col">
+            <h4>Контакты</h4>
+            <p>г. Саратов, наб. Космонавтов, 5</p>
+            <p>+7 (8452) 00-00-00</p>
+            <p>Ежедневно 10:00–23:00</p>
+        </div>
+    </div>
+    <div class="footer__bottom">
+        <p>© 2026 Кафе «Тофу». Все права защищены.</p>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

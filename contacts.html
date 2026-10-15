@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакты — Тофу</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header class="header">
+    <div class="container header__inner">
+        <a href="index.html" class="logo">
+            <span class="logo__mark">豆</span>
+            <span class="logo__text">Тофу</span>
+        </a>
+        <nav class="nav">
+            <a href="index.html" class="nav__link">Главная</a>
+            <a href="menu.html" class="nav__link">Меню</a>
+            <a href="about.html" class="nav__link">О кафе</a>
+            <a href="contacts.html" class="nav__link nav__link--active">Контакты</a>
+            <a href="booking.html" class="nav__link nav__link--accent">Бронирование</a>
+        </nav>
+        <button class="burger" aria-label="Меню">
+            <span></span><span></span><span></span>
+        </button>
+    </div>
+</header>
+
+<section class="page-header">
+    <div class="container">
+        <h1 class="page-header__title">Контакты</h1>
+        <p class="page-header__subtitle">Мы всегда рады вашим вопросам и отзывам</p>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container contacts-grid">
+
+        <div class="contacts-info">
+            <h2 class="contacts-info__title">Как нас найти</h2>
+
+            <div class="contact-item">
+                <div class="contact-item__label">Адрес</div>
+                <div class="contact-item__value">г. Саратов, набережная Космонавтов, д. 5</div>
+            </div>
+            <div class="contact-item">
+                <div class="contact-item__label">Телефон</div>
+                <div class="contact-item__value">
+                    <a href="tel:+78452000000">+7 (8452) 00-00-00</a>
+                </div>
+            </div>
+            <div class="contact-item">
+                <div class="contact-item__label">Режим работы</div>
+                <div class="contact-item__value">Ежедневно с 10:00 до 23:00</div>
+            </div>
+            <div class="contact-item">
+                <div class="contact-item__label">Соцсети</div>
+                <div class="contact-item__value">
+                    <a href="#">ВКонтакте</a> · <a href="#">Telegram</a> · <a href="#">Instagram</a>
+                </div>
+            </div>
+
+            <div class="contacts-map">
+                <iframe
+                    src="https://www.openstreetmap.org/export/embed.html?bbox=46.03%2C51.53%2C46.05%2C51.54&layer=mapnik"
+                    loading="lazy"
+                    title="Карта проезда">
+                </iframe>
+            </div>
+        </div>
+
+        <div class="contacts-form-wrap">
+            <h2 class="contacts-info__title">Обратная связь</h2>
+            <p class="contacts-form__note">Оставьте сообщение — мы ответим в течение дня.</p>
+
+            <form class="form" id="feedbackForm" novalidate>
+
+                <div class="form__row">
+                    <label class="form__label" for="fb-name">Ваше имя *</label>
+                    <input type="text" id="fb-name" name="name" class="form__input"
+                           placeholder="Например, Анна" required>
+                    <span class="form__error" data-error-for="fb-name"></span>
+                </div>
+
+                <div class="form__row">
+                    <label class="form__label" for="fb-email">Email или телефон *</label>
+                    <input type="text" id="fb-email" name="contact" class="form__input"
+                           placeholder="mail@example.com или +7 ..." required>
+                    <span class="form__error" data-error-for="fb-email"></span>
+                </div>
+
+                <div class="form__row">
+                    <label class="form__label" for="fb-message">Сообщение *</label>
+                    <textarea id="fb-message" name="message" class="form__input form__textarea"
+                              placeholder="Ваш вопрос или отзыв" required></textarea>
+                    <span class="form__error" data-error-for="fb-message"></span>
+                </div>
+
+                <button type="submit" class="btn btn--primary form__submit">
+                    Отправить
+                </button>
+
+                <p class="form__note">* — обязательные поля</p>
+            </form>
+
+            <div class="form-success" id="fbSuccess" hidden>
+                <div class="form-success__icon">✓</div>
+                <h3 class="form-success__title">Сообщение отправлено!</h3>
+                <p class="form-success__text">Спасибо за обращение. Мы свяжемся с вами в ближайшее время.</p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="container footer__inner">
+        <div class="footer__col">
+            <a href="index.html" class="logo">
+                <span class="logo__mark">豆</span>
+                <span class="logo__text">Тофу</span>
+            </a>
+            <p class="footer__text">Вегетарианская кухня в уютной атмосфере</p>
+        </div>
+        <div class="footer__col">
+            <h4>Разделы</h4>
+            <a href="menu.html">Меню</a>
+            <a href="about.html">О кафе</a>
+            <a href="contacts.html">Контакты</a>
+            <a href="booking.html">Бронирование</a>
+        </div>
+        <div class="footer__col">
+            <h4>Контакты</h4>
+            <p>г. Саратов, наб. Космонавтов, 5</p>
+            <p>+7 (8452) 00-00-00</p>
+            <p>Ежедневно 10:00–23:00</p>
+        </div>
+    </div>
+    <div class="footer__bottom">
+        <p>© 2026 Кафе «Тофу». Все права защищены.</p>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
